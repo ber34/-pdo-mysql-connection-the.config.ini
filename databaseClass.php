@@ -30,7 +30,8 @@
  
                if($this->dns = $this->engine.':host='.$this->host.';port='.$this->port.';dbname='.$this->database.';')
                  {     
-                 parent::__construct($this->dns, $this->user, $this->pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));
+   parent::__construct($this->dns, $this->user, $this->pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'',
+    PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
                  }
         // echo 'Połączenie nawiązane!';
           }catch(PDOException $e){
