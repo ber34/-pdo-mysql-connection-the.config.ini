@@ -1,8 +1,8 @@
  </php
  class DataBase{
-  private $engine;
+          private $engine;
           private $host;
-      private $port;
+          private $port;
           private $database;
           private $user;
           private $file;
