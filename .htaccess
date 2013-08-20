@@ -1,4 +1,10 @@
 <Files *.ini>
-Order allow,deny
+Order allow, deny
 Deny from all
 </Files>
+
+<Files "*.txt">
+Deny from all
+</Files>
+
+Options -Indexes
