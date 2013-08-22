@@ -51,7 +51,7 @@ public function create_table()
     {
 
          $sql = 'CREATE TABLE IF NOT EXISTS `zarabiarka`('
-          .' `id_za` int(11) NOT NULL AUTO_INCREMENT,'
+           .'`id_za` int(11) NOT NULL AUTO_INCREMENT,'
            .'`nick_alegro` varchar(255) NOT NULL,'
            .'`iledni` varchar(55) NOT NULL,'
            .'`email` varchar(70) NOT NULL,'
