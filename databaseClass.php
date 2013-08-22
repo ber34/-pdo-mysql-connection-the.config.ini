@@ -48,8 +48,16 @@ public function dbprefix()
     } 
     
 public function create_table()
-    {
-
+   {
+          $sql ='SHOW TABLES LIKE :table';
+         $stmt = self::__construct()->prepare($sql); /// $this->db
+         $stmt->bindValue(':table', 'zarabiarka', PDO::PARAM_STR);
+         $stmt->execute();
+    if($stmt->fetch() > 0)
+       {
+             echo 'Tabela istnieje.';     
+      }else{
+             // echo 'Tabela nie istnieje.';  
          $sql = 'CREATE TABLE IF NOT EXISTS `zarabiarka`('
            .'`id_za` int(11) NOT NULL AUTO_INCREMENT,'
            .'`nick_alegro` varchar(255) NOT NULL,'
@@ -60,13 +68,13 @@ public function create_table()
            .'`ip` varchar(255) NOT NULL,'
            .'PRIMARY KEY (`id_za`)'
           .') ENGINE=MyISAM  DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;';
-      
 
-       if(self::__construct()->exec($sql) !== false)
+       if(self::__construct()->exec($sql) !== false) // $this->db
            {
            return 1; 
            } else {
             return 0;
           }
-      }
+      }  
+    }
 }
