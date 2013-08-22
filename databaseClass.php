@@ -62,7 +62,7 @@ public function create_table()
           .') ENGINE=MyISAM  DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;';
       
 
-       if($this->db->exec($sql) !== false)
+       if(self::__construct()->exec($sql) !== false)
            {
            return 1; 
            } else {
