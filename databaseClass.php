@@ -1,6 +1,6 @@
  </php
  /** PHP 5.1
-  * @version 1.60
+  * @version 1.0
   * @Added support for the Protocol Open Graph Facebook
   * @Added support for the framework Bootstrap 
   * @license Apache License, Version 2.0.
@@ -26,12 +26,12 @@
              {     
                if($this->file = parse_ini_file('dbconfig.ini', TRUE, INI_SCANNER_NORMAL))
                  {
-                   $this->engine   = $this->file['db']['baza']; // np 'mysql'
-                   $this->host     = $this->file['db']['host']; // 'localhost'
-               $this->port     = $this->file['db']['port']; // '3306'
-                   $this->database = $this->file['db']['dbname']; // nazwa bazy danych
-                   $this->user     = $this->file['db']['username']; //nazwa uzytkownika
-                   $this->pass     = $this->file['db']['password']; // hasło uzytkownika
+                   $this->engine   = $this->file['db']['baza']; /* np 'mysql'*/
+                   $this->host     = $this->file['db']['host'];  /*'localhost'*/
+               $this->port     = $this->file['db']['port']; /* '3306'*/
+                   $this->database = $this->file['db']['dbname']; /* nazwa bazy danych*/
+                   $this->user     = $this->file['db']['username']; /*nazwa uzytkownika*/
+                   $this->pass     = $this->file['db']['password']; /* hasło uzytkownika*/
                   }else{
                     echo 'Otwarcie ' . $this->file . 'Nieudane.';
                  }
@@ -59,7 +59,7 @@ public function dbprefix()
 public function create_table()
    {
           $sql ='SHOW TABLES LIKE :table';
-         $stmt = self::__construct()->prepare($sql); /// $this->db
+         $stmt = self::__construct()->prepare($sql); /* $this->db*/
          $stmt->bindValue(':table', 'zarabiarka', PDO::PARAM_STR);
          $stmt->execute();
     if($stmt->fetch() > 0)
@@ -78,7 +78,7 @@ public function create_table()
            .'PRIMARY KEY (`id_za`)'
           .') ENGINE=MyISAM  DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;';
 
-       if(self::__construct()->exec($sql) !== false) // $this->db
+       if(self::__construct()->exec($sql) !== false) /* $this->db*/
            {
            return 1; 
            } else {
