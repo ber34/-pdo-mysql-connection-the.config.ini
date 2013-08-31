@@ -42,7 +42,7 @@
    parent::__construct($this->dns, $this->user, $this->pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'',
     PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
                  }
-        // echo 'Połączenie nawiązane!';
+        /* echo 'Połączenie nawiązane!';*/
           }catch(PDOException $e){
                 echo 'Połączenie nie mogło zostać utworzone.'.$e->getMessage();
           }
