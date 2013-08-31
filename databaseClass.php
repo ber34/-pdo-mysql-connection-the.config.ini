@@ -66,7 +66,7 @@ public function create_table()
        {
              echo 'Tabela istnieje.';     
       }else{
-             // echo 'Tabela nie istnieje.';  
+             /* echo 'Tabela nie istnieje.';*/  
          $sql = 'CREATE TABLE IF NOT EXISTS `zarabiarka`('
            .'`id_za` int(11) NOT NULL AUTO_INCREMENT,'
            .'`nick_alegro` varchar(255) NOT NULL,'
