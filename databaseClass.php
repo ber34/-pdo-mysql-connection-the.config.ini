@@ -1,4 +1,13 @@
  </php
+ /** PHP 5.1
+  * @version 1.60
+  * @Added support for the Protocol Open Graph Facebook
+  * @Added support for the framework Bootstrap 
+  * @license Apache License, Version 2.0.
+  * @author Adam Berger <ber34@o2.pl>
+  * @Site www.joomla-cms.com.pl
+  */
+  
  class DataBase{
           private $engine;
           private $host;
